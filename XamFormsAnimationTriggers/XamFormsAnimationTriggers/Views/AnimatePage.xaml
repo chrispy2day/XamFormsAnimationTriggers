@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamFormsAnimationTriggers.Views.AnimatePage">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0" WinPhone="0"/>
+  </ContentPage.Padding>
+  
+  <StackLayout HorizontalOptions="FillAndExpand" 
+               VerticalOptions="FillAndExpand"
+               Spacing="5">
+    <Label Text="{Binding Title}"
+           Style="{DynamicResource TitleStyle}"
+           VerticalOptions="Start" 
+           HorizontalOptions="Center" />
+    <BoxView HorizontalOptions="FillAndExpand" 
+             HeightRequest="2"
+             Color="Gray"/>
+
+    <Label Text="{Binding Approach}"
+           Style="{DynamicResource BodyStyle}"
+           VerticalOptions="Start"
+           HorizontalOptions="Center" />
+    
+    <BoxView x:Name="box" 
+             WidthRequest="100"
+             HeightRequest="100"
+             HorizontalOptions="Center"
+             VerticalOptions="CenterAndExpand"
+             Color="Red"/>
+    
+    <Button Text="Animate!"
+            Command="{Binding Animate}"
+            HorizontalOptions="Center"
+            VerticalOptions="End" />
+    
+  </StackLayout>
+  
+</ContentPage>
